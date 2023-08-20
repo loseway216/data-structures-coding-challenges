@@ -77,10 +77,10 @@ class Graph {
     console.log(">>Adjacency List of Directed Graph<<");
     var i;
     for (i = 0; i < this.adjacentList.length; i++) {
-      process.stdout.write("|" + String(i) + "| => ");
+      console.log("|" + String(i) + "| => ");
       let temp = this.adjacentList[i].getHead();
       while (temp != null) {
-        process.stdout.write("[" + String(temp.data) + "] -> ");
+        console.log("[" + String(temp.data) + "] -> ");
         temp = temp.next;
       }
       console.log("null ");

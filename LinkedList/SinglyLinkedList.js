@@ -34,7 +34,7 @@ class LinkedList {
     }
 
     let currentNode = this.head;
-    while (currentNode.next != null) {
+    while (currentNode.next !== null) {
       currentNode = currentNode.next;
     }
     currentNode.next = node;
@@ -49,12 +49,12 @@ class LinkedList {
 
     let currentNode = this.head;
 
-    if (currentNode.next == null) {
+    if (currentNode.next === null) {
       this.head = null;
       return this;
     }
 
-    while (currentNode.next != null && currentNode.next.next != null) {
+    while (currentNode.next !== null && currentNode.next.next !== null) {
       currentNode = currentNode.next;
     }
     currentNode.next = null;
@@ -69,13 +69,13 @@ class LinkedList {
 
     let currentNode = this.head;
 
-    if (currentNode.data == value) {
+    if (currentNode.data === value) {
       this.head = currentNode.next;
       return true;
     }
 
-    while (currentNode.next != null) {
-      if (currentNode.next.data == value) {
+    while (currentNode.next !== null) {
+      if (currentNode.next.data === value) {
         currentNode.next = currentNode.next.next;
         return true;
       }
@@ -91,8 +91,8 @@ class LinkedList {
     }
 
     let currentNode = this.head;
-    if (currentNode != null) {
-      if ((currentNode.data = value)) {
+    while (currentNode !== null) {
+      if (currentNode.data === value) {
         return true;
       }
       currentNode = currentNode.next;
@@ -120,9 +120,9 @@ class LinkedList {
       return false;
     } else {
       let temp = this.head;
-      while (temp != null) {
-        process.stdout.write(String(temp.data));
-        process.stdout.write(" -> ");
+      while (temp !== null) {
+        console.log(String(temp.data));
+        console.log(" -> ");
         temp = temp.next;
       }
       console.log("null");
@@ -137,7 +137,7 @@ class LinkedList {
     } else {
       let st = "";
       let temp = this.head;
-      while (temp != null) {
+      while (temp !== null) {
         st += String(temp.data);
         st += " -> ";
         temp = temp.next;
