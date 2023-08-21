@@ -11,7 +11,7 @@ describe("SinglyLinkedList", () => {
     list.insertAtHead(7);
     list.insertAtHead(1);
 
-    console.log(list.getListStr());
+    // console.log(list.getListStr());
   });
 
   test("insertAtHead", () => {

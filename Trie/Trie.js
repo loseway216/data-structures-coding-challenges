@@ -14,7 +14,7 @@ class TrieNode {
   }
 }
 
-module.exports = class Trie {
+class Trie {
   // class Trie {
   constructor() {
     this.root = new TrieNode("");
@@ -135,33 +135,6 @@ module.exports = class Trie {
     }
     return true;
   }
-};
+}
 
-// // Input keys (use only 'a' through 'z' and lower case)
-// let keys = ["the", "a", "there", "answer", "any", "by", "bye", "their", "abc"];
-// let output = ["Not present in the trie", "Present in the trie"];
-
-// let t = new Trie();
-// console.log("Keys to insert: ");
-// console.log(keys);
-
-// //Construct Trie
-// for (var i = 0; i < keys.length; i++) {
-//   t.insert(keys[i]);
-// }
-
-// //Search for different keys
-// if (t.search("the") == true) console.log("the --- " + output[1]);
-// else console.log("the --- " + output[0]);
-
-// if (t.search("these") == true) console.log("these --- " + output[1]);
-// else console.log("these --- " + output[0]);
-
-// if (t.search("abc") == true) console.log("abc --- " + output[1]);
-// else console.log("abc --- " + output[0]);
-
-// t.delete("there");
-// console.log('Deleted key "there"');
-
-// if (t.search("there") == true) console.log("there --- " + output[1]);
-// else console.log("there --- " + output[0]);
+export default Trie;

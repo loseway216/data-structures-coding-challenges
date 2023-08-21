@@ -1,4 +1,4 @@
-module.exports = class MaxHeap {
+class MaxHeap {
   // class MaxHeap {
   constructor() {
     this.heap = [];
@@ -86,14 +86,6 @@ module.exports = class MaxHeap {
   printHeap() {
     console.log(this.heap);
   }
-};
+}
 
-// var heap = new MaxHeap();
-// var arr = [6, 9, 3, 4, 13, 22, 1, 30, 17];
-// heap.buildHeap(arr);
-// heap.printHeap();
-// // console.log(heap.getMax());
-// heap.removeMax();
-// heap.printHeap();
-// heap.removeMax();
-// heap.printHeap();
+export default MaxHeap;

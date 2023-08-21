@@ -1,4 +1,4 @@
-module.exports = class MinHeap {
+class MinHeap {
   // class MinHeap {
   constructor() {
     this.heap = [];
@@ -83,22 +83,6 @@ module.exports = class MinHeap {
   printHeap() {
     console.log(this.heap);
   }
-};
+}
 
-// var heap = new MinHeap();
-// heap.insert(12);
-// heap.insert(10);
-// heap.insert(-10);
-// heap.insert(100);
-
-// console.log(heap.getMin());
-
-// var newheap = new MinHeap();
-// var arr = [6, 9, 3, 4, 13, 22, 1, 30, 17];
-// newheap.buildHeap(arr);
-// newheap.printHeap();
-// console.log(newheap.getMin());
-
-// newheap.removeMin();
-
-// console.log(newheap.getMin());
+export default MinHeap;

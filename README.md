@@ -4,21 +4,25 @@ data structures and related coding challenges in JavaScript
 
 Array
 
-[LinkedList](./SinglyLinkedList.js)
+- [Merge Two Sorted Arrays](./Array/MergeTwoSortedArrays.js)
+- [Products of All Elements](./Array/ProductsOfAllElements.js)
+- [Find Second Maximum in Array](./Array/FindSecondMaximumInArray.js)
 
-[Queue](./Queue.js)
+[LinkedList](./LinkedList/SinglyLinkedList.js)
 
-[Stack](./Stack.js)
+[Queue](./Queue/Queue.js)
 
-[Graph](./Graph.js)
+[Stack](./Stack/Stack.js)
 
-[BinarySearchTree](./BinarySearchTree.js)
+[Graph](./Graph/Graph.js)
 
-[Trie](./Trie.js)
+[BinarySearchTree](./BinarySearchTree/BinarySearchTree.js)
 
-[Heap](./MaxHeap.js)
+[Trie](./Trie/Trie.js)
 
-[HashTable](./HashTable.js)
+[Heap](./Heap/MaxHeap.js)
+
+[HashTable](./HashTable/HashTable.js)
 
 ## Time and Space Complexity Cheat Table
 

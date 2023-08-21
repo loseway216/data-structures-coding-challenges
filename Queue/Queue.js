@@ -1,6 +1,6 @@
-const DoublyLinkedList = require("./DoublyLinkedList");
+import DoublyLinkedList from "../LinkedList/DoublyLinkedList";
 
-module.exports = class Queue {
+class Queue {
   constructor(size) {
     this.size = size;
     this.items = new DoublyLinkedList();
@@ -20,7 +20,7 @@ module.exports = class Queue {
 
   getTail() {
     if (!this.isEmpty()) {
-      return this.items.tailNode();
+      return this.items.getTail();
     } else {
       return null;
     }
@@ -33,4 +33,6 @@ module.exports = class Queue {
   dequeue() {
     return this.items.deleteAtHead();
   }
-};
+}
+
+export default Queue;

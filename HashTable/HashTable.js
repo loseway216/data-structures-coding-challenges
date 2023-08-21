@@ -6,7 +6,7 @@ class HashEntry {
   }
 }
 
-module.exports = class HashTable {
+class HashTable {
   constructor() {
     this.slots = 10;
     this.size = 0;
@@ -22,19 +22,19 @@ module.exports = class HashTable {
     return key % this.slots;
   }
 
-  get_size() {
+  getSize() {
     return this.size;
   }
 
   isEmpty() {
-    return this.get_size() === 0;
+    return this.getSize() === 0;
   }
 
   insert(key, value) {
     const index = this.getIndex(key);
     if (this.bucket[index] == null) {
       this.bucket[index] = new HashEntry(key, value);
-      console.log(String(key) + ", " + String(value) + " - inserted.");
+      // console.log(String(key) + ", " + String(value) + " - inserted.");
     } else {
       let head = this.bucket[index];
       while (head) {
@@ -43,7 +43,7 @@ module.exports = class HashTable {
           break;
         } else if (head.next == null) {
           head.next = new HashEntry(key, value);
-          console.log(String(key) + ", " + String(value) + " - inserted.");
+          // console.log(String(key) + ", " + String(value) + " - inserted.");
           break;
         }
         head = head.next;
@@ -78,7 +78,7 @@ module.exports = class HashTable {
     // if key exists at first slot
     if (head.key == key) {
       this.bucket[index] = head.next;
-      console.log("Key deleted");
+      // console.log("Key deleted");
       this.size -= 1;
       return this;
     }
@@ -87,7 +87,7 @@ module.exports = class HashTable {
     while (head) {
       if (head.key == key) {
         prev.next = head.next;
-        console.log("Key deleted");
+        // console.log("Key deleted");
         this.size -= 1;
         return this;
       }
@@ -96,7 +96,7 @@ module.exports = class HashTable {
     }
 
     //If key does not exist
-    console.log("Key not found");
+    // console.log("Key not found");
     return null;
   }
 
@@ -131,17 +131,6 @@ module.exports = class HashTable {
 
     this.bucket = new_bucket;
   }
-};
+}
 
-// let table = new HashTable(); //Create a HashTable
-// console.log(table.isEmpty());
-// table.insert("This", 1);
-// table.insert("is", 2);
-// table.insert("a", 3);
-// table.insert("Test", 4);
-// table.insert("Driver", 5);
-// console.log("Table Size: " + String(table.get_size()));
-// console.log("The value for 'is' key: " + String(table.search("is")));
-// table.deleteVal("is");
-// table.deleteVal("a");
-// console.log("Table Size: " + String(table.get_size()));
+export default HashTable;

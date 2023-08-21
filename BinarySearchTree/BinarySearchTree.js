@@ -194,31 +194,3 @@ class BinarySearchTree {
 }
 
 export default BinarySearchTree;
-
-// var BST = new BinarySearchTree(6);
-// console.log("The root val for BST : ", BST.root.val);
-// BST.insert(4);
-// BST.insert(9);
-// BST.insert(5);
-// BST.insert(2);
-// BST.insert(8);
-// BST.insert(12);
-// BST.insert(3);
-// BST.insert(1);
-
-// BST.inOrderPrint(BST.root);
-// console.log("Delete 9!");
-// console.log(BST.delete(BST.root, 9));
-// BST.inOrderPrint(BST.root);
-
-// var BST = new BinarySearchTree(6);
-// console.log("The root val for BST : ", BST.root.val);
-// BST.insert(4);
-// BST.insert(9);
-// BST.insert(5);
-// BST.insert(2);
-// BST.insert(8);
-// BST.insert(12);
-
-// console.log(BST.search(8));
-// console.log(BST.search(11));

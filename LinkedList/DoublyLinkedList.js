@@ -1,131 +1,82 @@
 class Node {
   constructor(data) {
     this.data = data;
-    this.nextElement = null;
+    this.next = null;
   }
 }
 
 class DoublyLinkedList {
   constructor() {
+    this.length = 0;
     this.head = null;
     this.tail = null;
   }
 
-  isEmpty() {
-    return this.head == null;
-  }
+  // Add node to the end of the list
+  insertAtTail(item) {
+    const newNode = new Node(item);
 
-  getHead() {
-    return this.head;
-  }
+    if (this.length === 0) {
+      this.head = newNode;
+      this.tail = newNode;
+    } else {
+      this.tail.next = newNode;
 
-  //Insertion At Head
-  insertAtHead(newData) {
-    let tempNode = new Node(newData);
-    tempNode.nextElement = this.head;
-    if (this.isEmpty()) {
-      this.tail = tempNode;
-      this.head = tempNode;
-      return this;
+      newNode.prev = this.tail;
+
+      this.tail = newNode;
     }
-    this.head.previousElement = tempNode;
-    this.head = tempNode;
-    return this; //returning the updated list
-  }
 
-  insertAtTail(newData) {
-    let tempNode = new Node(newData);
-    tempNode.previousElement = this.tail;
-    if (this.isEmpty()) {
-      this.head = tempNode;
-      this.tail = tempNode;
-      return this;
-    }
-    this.tail.nextElement = tempNode;
-    this.tail = tempNode;
-    return this; //returning the updated list
-  }
+    this.length++;
 
-  search(value) {
-    //Start from the first element
-    let currentNode = this.head;
-
-    //Traverse the list until you find the value or reach the end
-    while (currentNode != null) {
-      if (currentNode.data == value) {
-        return true; //value found
-      }
-      currentNode = currentNode.nextElement;
-    }
-    return false; //value not found
+    return newNode;
   }
 
   deleteAtHead() {
-    //if list is empty, do nothing
-    if (this.isEmpty()) {
-      return this;
+    if (this.length === 0) {
+      return null;
     }
-    //Get the head and first element of the list
-    let firstElement = this.head;
 
-    //If list is not empty, link head to the nextElement of firstElement
-    this.head = firstElement.nextElement;
-    if (this.head == null) {
-      this.tail = null;
-      return this;
-    }
-    this.head.previousElement = null;
-    return this;
-  }
+    const nodeToRemove = this.head;
 
-  deleteAtTail() {
-    //if list is empty, do nothing
-    if (this.isEmpty()) {
-      return this;
-    }
-    //Get the head and first element of the list
-    let lastElement = this.tail;
-    //If list is not empty, link head to the nextElement of firstElement
-    this.tail = lastElement.previousElement;
-    if (this.tail == null) {
+    if (this.length === 1) {
       this.head = null;
-      return this;
+      this.tail = null;
+    } else {
+      this.head = nodeToRemove.next;
+
+      this.head.prev = null;
+      nodeToRemove.next = null;
     }
-    this.tail.nextElement = null;
-    return this;
+
+    this.length--;
+
+    return nodeToRemove.data;
   }
 
-  //function to print the linked list
-  printList() {
-    if (this.isEmpty()) {
-      console.log("Empty List");
-      return false;
-    } else {
-      let temp = this.head;
-      while (temp != null) {
-        console.log(String(temp.data));
-        console.log(" <-> ");
-        temp = temp.nextElement;
-      }
-      console.log("null");
-      return true;
-    }
+  getHead() {
+    if (!(this.head == null)) {
+      return this.head.data;
+    } else return null;
   }
 
-  getListStr() {
-    if (this.isEmpty()) {
-      console.log("Empty List");
-      return "null";
-    } else {
-      let st = "";
-      let temp = this.head;
-      while (temp != null) {
-        st += String(temp.data);
-        st += " <-> ";
-        temp = temp.nextElement;
-      }
-      st += "null";
-      return st;
+  getTail() {
+    if (!(this.tail == null)) {
+      return this.tail.data;
+    } else return null;
+  }
+
+  toString() {
+    const list = [];
+    let currentNode = this.head;
+
+    while (currentNode !== null) {
+      list.push(JSON.stringify(currentNode.data));
+      currentNode = currentNode.next;
     }
+
+    return list.toString();
   }
 }
+
+export default DoublyLinkedList;

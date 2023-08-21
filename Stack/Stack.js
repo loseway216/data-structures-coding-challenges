@@ -1,4 +1,4 @@
-module.exports = class Stack {
+class Stack {
   constructor(size) {
     this.size = size;
     this.items = [];
@@ -23,4 +23,6 @@ module.exports = class Stack {
   getTop() {
     return this.items[this.items.length - 1];
   }
-};
+}
+
+export default Stack;

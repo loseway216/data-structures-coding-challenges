@@ -1,6 +1,6 @@
-const LinkedList = require("./SinglyLinkedList");
-const Queue = require("./Queue");
-const Stack = require("./Stack");
+import LinkedList from "../LinkedList/SinglyLinkedList";
+import Queue from "../Queue/Queue";
+import Stack from "../Stack/Stack";
 
 class Graph {
   constructor(vertices) {
@@ -88,12 +88,4 @@ class Graph {
   }
 }
 
-// let g1 = new Graph(6);
-// g1.addEdge(0, 1);
-// g1.addEdge(0, 2);
-// g1.addEdge(1, 3);
-// g1.addEdge(1, 4);
-// g1.addEdge(2, 5);
-// g1.printGraph();
-// console.log(g1.bfsTraversal(0));
-// console.log(g1.dfsTraversal(0));
+export default Graph;
