@@ -1,6 +1,6 @@
 # data-structures-coding-challenges
 
-data structures and related coding challenges in JavaScript
+## data structures and related coding challenges in JavaScript
 
 Array
 
