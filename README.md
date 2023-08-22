@@ -1,18 +1,32 @@
 # data-structures-coding-challenges
 
-## data structures and related coding challenges in JavaScript
+data structures and related coding challenges in JavaScript
+
+---
 
 Array
 
 - [Merge Two Sorted Arrays](./Array/MergeTwoSortedArrays.js)
 - [Products of All Elements](./Array/ProductsOfAllElements.js)
-- [Find Second Maximum in Array](./Array/FindSecondMaximumInArray.js)
+- [Find Second Maximum in an Array](./Array/FindSecondMaximumInArray.js)
+- [Rearrange Positive & Negative Values](./Array/RearrangePositiveNegativeValues.js)
+- [Rearrange Sorted Array in Max/Min Form](./Array/RearrangeSortedArrayMaxMinForm.js)
+- [Maximum Sum SubArray](./Array/MaximumSumSubArray.js)
 
 [LinkedList](./LinkedList/SinglyLinkedList.js)
 
-[Queue](./Queue/Queue.js)
+- [Find the Length of a Linked List](./LinkedList/FindTheLengthOfLinkedList.js)
+- [Reverse a Linked List](./LinkedList/ReverseLinkedList.js)
+- [Detect a Loop in a Linked List](./LinkedList/DetectLoop.js)
+- [Find Middle Node of a Linked List](./LinkedList/FindMiddleNodeOfLinkedList.js)
+- [Remove Duplicates from Linked List](./LinkedList/RemoveDuplicatesFromLinkedList.js)
+- [Union & Intersection of Linked Lists](./LinkedList/UnionAndIntersectionOfLinkedLists.js)
+- [Return the Nth Node from the End](./LinkedList/ReturnNthNodeFromEnd.js)
 
-[Stack](./Stack/Stack.js)
+[Queue&Stacks](./Queue&Stack/Queue.js)
+
+- [Generate Binary Numbers From 1 to n Using Queue](./Queue&Stack/GenerateBinaryNumbersUsingQueue.js)
+- [Reverse First k Elements of Queue](./Queue&Stack/ReverseFirstKElementsOfQueue.js)
 
 [Graph](./Graph/Graph.js)
 
