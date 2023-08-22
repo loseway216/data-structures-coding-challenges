@@ -1,9 +1,12 @@
 import DoublyLinkedList from "../LinkedList/DoublyLinkedList";
 
 class Queue {
-  constructor(size) {
-    this.size = size;
+  constructor() {
     this.items = new DoublyLinkedList();
+  }
+
+  size() {
+    return this.items.length;
   }
 
   isEmpty() {

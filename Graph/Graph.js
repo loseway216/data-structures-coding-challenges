@@ -1,7 +1,6 @@
 import LinkedList from "../LinkedList/SinglyLinkedList";
-import Queue from "../Queue/Queue";
-import Stack from "../Stack/Stack";
-
+import Queue from "../Queue&Stack/Queue";
+import Stack from "../Queue&Stack/Stack";
 class Graph {
   constructor(vertices) {
     this.vertices = vertices;
