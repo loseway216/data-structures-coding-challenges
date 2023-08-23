@@ -14,5 +14,18 @@ test("Reverse First k Elements of Queue", () => {
   queue.enqueue(9);
   queue.enqueue(10);
 
-  expect(reverseK(queue, 5)).toEqual([5, 4, 3, 2, 1, 6, 7, 8, 9, 10]);
+  const q2 = new Queue();
+  q2.enqueue(5);
+  q2.enqueue(4);
+  q2.enqueue(3);
+  q2.enqueue(2);
+  q2.enqueue(1);
+  q2.enqueue(6);
+  q2.enqueue(7);
+  q2.enqueue(8);
+  q2.enqueue(9);
+  q2.enqueue(10);
+
+  reverseK(queue, 5);
+  expect(queue.toString()).toBe(q2.toString());
 });
