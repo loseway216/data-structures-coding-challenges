@@ -27,6 +27,8 @@ Array
 
 - [Generate Binary Numbers From 1 to n Using Queue](./Queue&Stack/GenerateBinaryNumbersUsingQueue.js)
 - [Reverse First k Elements of Queue](./Queue&Stack/ReverseFirstKElementsOfQueue.js)
+- [Implement a Queue Using Stacks](./Queue&Stack/ImplementQueueUsingStacks.js)
+- [Implement Two Stacks using One Array](./Queue&Stack/ImplementTwoStacksUsingArray.js)
 
 [Graph](./Graph/Graph.js)
 
