@@ -29,8 +29,16 @@ Array
 - [Reverse First k Elements of Queue](./Queue&Stack/ReverseFirstKElementsOfQueue.js)
 - [Implement a Queue Using Stacks](./Queue&Stack/ImplementQueueUsingStacks.js)
 - [Implement Two Stacks using One Array](./Queue&Stack/ImplementTwoStacksUsingArray.js)
+- [Sort Values in Stack](./Queue&Stack/SortValuesInStack.js)
+- [Evaluate Postfix Expression Using a Stack](./Queue&Stack/EvaluatePostfixExpressionUsingStack.js)
+- [Next Greater Element Using a Stack](./Queue&Stack/NextGreaterElementUsingStack.js)
+- [Check Balanced Parentheses Using Stack"](./Queue&Stack/CheckBalancedParenthesesUsingStack.js)
+- [Min Stack](./Queue&Stack/MinStack.js)
 
 [Graph](./Graph/Graph.js)
+
+- [Detect Cycle in Graph](./Graph/DetectCycleInGraph.js)
+- [Find a "Mother Vertex" in a Graph](./Graph/FindMotherVertex.js)
 
 [BinarySearchTree](./BinarySearchTree/BinarySearchTree.js)
 
