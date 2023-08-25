@@ -2,8 +2,6 @@
 
 data structures and related coding challenges in JavaScript
 
----
-
 Array
 
 - [Merge Two Sorted Arrays](./Array/MergeTwoSortedArrays.js)
@@ -39,10 +37,26 @@ Array
 
 - [Detect Cycle in Graph](./Graph/DetectCycleInGraph.js)
 - [Find a "Mother Vertex" in a Graph](./Graph/FindMotherVertex.js)
+- [Count the Number of Edges in an Undirected Graph](./Graph/NumberOfEdges.js)
+- [Check if a Path Exists Between Two Vertices](./Graph/CheckPathBetweenTwoVertices.js)
+- [Find the Shortest Path Between Two Vertices](./Graph/FindShortestPath.js)
+- [Check if an Undirected Graph is Tree or not](./Graph/CheckGraphIsTree.js)
+- [Remove Edge](./Graph/RemoveEdge.js)
 
 [BinarySearchTree](./BinarySearchTree/BinarySearchTree.js)
 
+- [Find the Minimum Value in a Binary Search Tree](./BinarySearchTree/FindMinimumValue.js)
+- [Find the kth Maximum Value in a Binary Search Tree](./BinarySearchTree/FindKthMaximumValue.js)
+- [Find Ancestors of a Given Node in a BST](./BinarySearchTree/FindAncestors.js)
+- [Find the Height of a BST](./BinarySearchTree/FindHeight.js)
+- [Find Nodes at "k" Distance From the Root](./BinarySearchTree/FindKNodes.js)
+
 [Trie](./Trie/Trie.js)
+
+- [Total Number of Words in a Trie](./Trie/TotalWords.js)
+- [Find All Words Stored in Trie](./Trie/FindAllWords.js)
+- [Array Sort Using Tries](./Trie/ArraySort.js)
+- [Word Formation from a Dictionary Using a Trie](./Trie/WordFormation.js)
 
 [Heap](./Heap/MaxHeap.js)
 
