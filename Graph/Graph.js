@@ -2,8 +2,9 @@ import LinkedList from "../LinkedList/SinglyLinkedList";
 import Queue from "../Queue&Stack/Queue";
 import Stack from "../Queue&Stack/Stack";
 class Graph {
-  constructor(vertices) {
+  constructor(vertices, isDirected = true) {
     this.vertices = vertices;
+    this.isDirected = isDirected;
     this.adjacentList = [];
 
     for (let i = 0; i < vertices; i++) {
@@ -14,6 +15,10 @@ class Graph {
   addEdge(source, destination) {
     if (source < this.vertices && destination < this.vertices) {
       this.adjacentList[source].insertAtHead(destination);
+      // undirected graph
+      if (!this.isDirected) {
+        this.adjacentList[destination].insertAtHead(source);
+      }
     }
     return this;
   }

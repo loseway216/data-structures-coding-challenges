@@ -1,10 +1,10 @@
 // Detect Cycle in Graph
-export default function detectCycle(g) {
-  const visited = new Array(g.vertices).fill(false);
-  const recursionStack = new Array(g.vertices).fill(false);
+export default function detectCycle(graph) {
+  const visited = new Array(graph.vertices).fill(false);
+  const recursionStack = new Array(graph.vertices).fill(false);
 
-  for (let i = 0; i < g.vertices; i++) {
-    if (detectRecursive(g, i, visited, recursionStack)) {
+  for (let i = 0; i < graph.vertices; i++) {
+    if (dfs(graph, i, visited, recursionStack)) {
       return true;
     }
   }
@@ -12,20 +12,22 @@ export default function detectCycle(g) {
   return false;
 }
 
-function detectRecursive(g, source, visited, recursionStack) {
+function dfs(graph, source, visited, recursionStack) {
   if (recursionStack[source]) {
     return true;
   }
+
   if (visited[source]) {
     return false;
   }
+
   visited[source] = true;
   recursionStack[source] = true;
 
-  let start = g.adjacentList[source].getHead();
+  let start = graph.adjacentList[source].getHead();
 
   while (start) {
-    if (detectRecursive(g, start.data, visited, recursionStack)) {
+    if (dfs(graph, start.data, visited, recursionStack)) {
       return true;
     }
     start = start.next;
