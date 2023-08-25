@@ -1,6 +1,6 @@
 class Node {
   constructor(value) {
-    this.val = value;
+    this.value = value;
     this.leftChild = null;
     this.rightChild = null;
   }
@@ -22,14 +22,14 @@ class BinarySearchTree {
 
     while (currentNode) {
       parent = currentNode;
-      if (newValue < currentNode.val) {
+      if (newValue < currentNode.value) {
         currentNode = currentNode.leftChild;
       } else {
         currentNode = currentNode.rightChild;
       }
     }
 
-    if (newValue < parent.val) {
+    if (newValue < parent.value) {
       parent.leftChild = new Node(newValue);
     } else {
       parent.rightChild = new Node(newValue);
@@ -42,7 +42,7 @@ class BinarySearchTree {
   insertHelper(currentNode, newValue) {
     if (currentNode == null) {
       this.root = new Node(newValue);
-    } else if (newValue < currentNode.val) {
+    } else if (newValue < currentNode.value) {
       currentNode.leftChild = this.insertHelper(
         currentNode.leftChild,
         newValue
@@ -60,8 +60,8 @@ class BinarySearchTree {
     let currentNode = this.root;
 
     // 迭代
-    while (currentNode && currentNode.val !== value) {
-      if (value < currentNode.val) {
+    while (currentNode && currentNode.value !== value) {
+      if (value < currentNode.value) {
         currentNode = currentNode.leftChild;
       } else {
         currentNode = currentNode.rightChild;
@@ -77,9 +77,9 @@ class BinarySearchTree {
 
   searchHelper(currentNode, value) {
     if (currentNode) {
-      if (currentNode.val === value) {
+      if (currentNode.value === value) {
         return currentNode;
-      } else if (value < currentNode.val) {
+      } else if (value < currentNode.value) {
         return this.searchHelper(currentNode.leftChild, value);
       } else {
         return this.searchHelper(currentNode.rightChild, value);
@@ -97,9 +97,9 @@ class BinarySearchTree {
 
     let parent;
 
-    while (currentNode && currentNode.val !== value) {
+    while (currentNode && currentNode.value !== value) {
       parent = currentNode;
-      if (value < currentNode.val) {
+      if (value < currentNode.value) {
         currentNode = currentNode.leftChild;
       } else {
         currentNode = currentNode.rightChild;
@@ -113,12 +113,12 @@ class BinarySearchTree {
     // case 3: delete a leaf node
     else if (currentNode.leftChild == null && currentNode.rightChild == null) {
       // delete the root node
-      if (currentNode.val == this.root.val) {
+      if (currentNode.value == this.root.value) {
         this.root = null;
         return true;
       }
       // 根据大小判断删除左边还是右边
-      else if (currentNode.val < parent.val) {
+      else if (currentNode.value < parent.value) {
         parent.leftChild = null;
         return true;
       } else {
@@ -128,10 +128,10 @@ class BinarySearchTree {
     }
     // case 4: delete a node has a left child only
     else if (currentNode.leftChild && currentNode.rightChild == null) {
-      if (currentNode.val == this.root.val) {
+      if (currentNode.value == this.root.value) {
         this.root = currentNode.leftChild;
         return true;
-      } else if (currentNode.leftChild.val < parent.val) {
+      } else if (currentNode.leftChild.value < parent.value) {
         parent.leftChild = currentNode.leftChild;
         return true;
       } else {
@@ -141,10 +141,10 @@ class BinarySearchTree {
     }
     // case 5: delete a node has a right child only
     else if (currentNode.rightChild && currentNode.leftChild == null) {
-      if (currentNode.val === this.root.val) {
+      if (currentNode.value === this.root.value) {
         this.root = currentNode.rightChild;
         return true;
-      } else if (currentNode.rightChild.val < parent.val) {
+      } else if (currentNode.rightChild.value < parent.value) {
         parent.leftChild = currentNode.leftChild;
         return true;
       } else {
@@ -161,16 +161,16 @@ class BinarySearchTree {
         minRight = minRight.leftChild;
       }
 
-      const temp = minRight.val;
-      this.delete(currentNode, minRight.val);
-      currentNode.val = temp;
+      const temp = minRight.value;
+      this.delete(currentNode, minRight.value);
+      currentNode.value = temp;
       return true;
     }
   }
 
   preOrderPrint(currentNode) {
     if (currentNode) {
-      console.log(currentNode.val);
+      console.log(currentNode.value);
       this.preOrderPrint(currentNode.leftChild);
       this.preOrderPrint(currentNode.rightChild);
     }
@@ -179,7 +179,7 @@ class BinarySearchTree {
   inOrderPrint(currentNode) {
     if (currentNode) {
       this.inOrderPrint(currentNode.leftChild);
-      console.log(currentNode.val);
+      console.log(currentNode.value);
       this.inOrderPrint(currentNode.rightChild);
     }
   }
@@ -188,7 +188,7 @@ class BinarySearchTree {
     if (currentNode) {
       this.inOrderPrint(currentNode.leftChild);
       this.inOrderPrint(currentNode.rightChild);
-      console.log(currentNode.val);
+      console.log(currentNode.value);
     }
   }
 }
