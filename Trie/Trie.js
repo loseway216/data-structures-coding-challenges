@@ -1,7 +1,7 @@
 class TrieNode {
   constructor(char) {
     this.char = char;
-    this.isEndkey = false;
+    this.isEndKey = false;
     this.children = new Array(26).fill(null);
   }
 
@@ -111,7 +111,7 @@ class Trie {
           deletedSelf = false;
         }
         //If childNode is deleted but if currentNode has more children then currentNode must be part of another key
-        //So, we cannot delete currenNode
+        //So, we cannot delete currentNode
         else if (this.hasNoChildren(currentNode) == false) {
           deletedSelf = false;
         }
