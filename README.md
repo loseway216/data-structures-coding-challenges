@@ -60,6 +60,10 @@ Array
 
 [Heap](./Heap/MaxHeap.js)
 
+- [Convert Max-Heap to Min-Heap](./Heap/ConvertMaxToMin.js)
+- [Find k Smallest Elements in an Array](./Heap/FindKSmallest.js)
+- [Find k Largest Elements in an Array](./Heap/FindKLargest.js)
+
 [HashTable](./HashTable/HashTable.js)
 
 ## Time and Space Complexity Cheat Table
