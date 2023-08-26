@@ -44,7 +44,7 @@ class MinHeap {
   buildHeap(arr) {
     this.heap = arr;
     this.elements = this.heap.length;
-    for (var i = this.heap.length - 1; i >= 0; i--) {
+    for (let i = this.heap.length - 1; i >= 0; i--) {
       this.__minHeapify(i);
     }
   }

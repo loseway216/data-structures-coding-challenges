@@ -27,13 +27,13 @@ class MaxHeap {
 
   removeMax() {
     if (this.elements > 1) {
-      var max = this.heap[0];
+      const max = this.heap[0];
       this.heap[0] = this.heap[this.elements - 1];
       this.elements = this.elements - 1;
       this.__maxHeapify(0);
       return max;
     } else if (this.elements == 1) {
-      var max = this.heap[0];
+      const max = this.heap[0];
       this.elements = this.elements - 1;
       return max;
     } else {
