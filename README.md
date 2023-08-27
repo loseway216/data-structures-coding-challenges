@@ -66,6 +66,16 @@ Array
 
 [HashTable](./HashTable/HashTable.js)
 
+- [An Array as a Subset of Another Array](./HashTable/ArrayIsSubset.js)
+- [Check if Arrays are Disjointed](./HashTable/ArrayIsDisjoint.js)
+- [Find Two Pairs Such That a+b = c+d](./HashTable/FindPair.js)
+- [A Subarray with a Sum of 0](./HashTable/FindSubZero.js)
+- [Find Symmetric Pairs in an Array](./HashTable/FindSymmetric.js)
+- [First First Unique Integer in an Array](./HashTable/FindFirstUnique.js)
+- [Remove Duplicates from a Linked List](./HashTable/RemoveDuplicates.js)
+- [Trace the Complete Path of a Journey](./HashTable/TracePath.js)
+- [Union of Linked Lists](./HashTable/UnionLinkedList.js)
+
 ## Time and Space Complexity Cheat Table
 
 Note: In the table, n is the total number of elements stored in the structure.
