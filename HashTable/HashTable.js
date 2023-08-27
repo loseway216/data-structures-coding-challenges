@@ -19,7 +19,7 @@ class HashTable {
 
   // hash function
   getIndex(key) {
-    return key % this.slots;
+    return Math.abs(key % this.slots);
   }
 
   getSize() {
