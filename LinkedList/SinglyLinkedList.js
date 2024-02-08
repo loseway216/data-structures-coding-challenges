@@ -5,6 +5,10 @@ class Node {
   }
 }
 
+// while(cur) 想遍历到每个node
+// while(cur.next) 在最后一个node停住
+// while(cur.next && cur.next.next) 在倒数第二个node停住
+
 class LinkedList {
   constructor() {
     this.head = null;
