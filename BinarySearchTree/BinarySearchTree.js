@@ -145,10 +145,10 @@ class BinarySearchTree {
         this.root = currentNode.rightChild;
         return true;
       } else if (currentNode.rightChild.value < parent.value) {
-        parent.leftChild = currentNode.leftChild;
+        parent.leftChild = currentNode.rightChild;
         return true;
       } else {
-        parent.rightChild = currentNode.leftChild;
+        parent.rightChild = currentNode.rightChild;
         return true;
       }
     }

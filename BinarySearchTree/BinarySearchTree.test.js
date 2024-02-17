@@ -14,6 +14,7 @@ describe("BinarySearchTree", () => {
     BST.insert(3);
     BST.insert(1);
     BST.insert(7);
+    BST.insert(14);
   });
 
   test("search", () => {
@@ -48,11 +49,11 @@ describe("BinarySearchTree", () => {
   });
 
   test("delete a leaf with a right node only", () => {
-    const result = BST.delete(BST.root, 4);
+    const result = BST.delete(BST.root, 12);
     expect(result).toBe(true);
 
-    const node = BST.search(6);
-    expect(node.leftChild.value).toBe(5);
+    const node = BST.search(9);
+    expect(node.rightChild.value).toBe(14);
   });
 
   test("delete a node with 2 children", () => {
